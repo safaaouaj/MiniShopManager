@@ -1,0 +1,34 @@
+[
+  {
+    "nom": "Téléphone",
+    "image": "telephone"
+  },
+  {
+    "nom": "Casque Bluetooth",
+    "image": "casque"
+  },
+  {
+    "nom": "Montre connectée",
+    "image": "montre"
+  },
+  {
+    "nom": "Chargeur USB",
+    "image": "chargeurr"
+  },
+  {
+    "nom": "Coque de téléphone",
+    "image": "coque"
+  },
+  {
+    "nom": "Écouteurs sans fil",
+    "image": "ecouteurs"
+  },
+  {
+    "nom": "Power Bank",
+    "image": "powerbank"
+  },
+  {
+    "nom": "Câble USB-C",
+    "image": "cable"
+  }
+]

@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Couleurs principales -->
+    <color name="rose_poudre">#E8B7C8</color>
+    <color name="bordeaux">#702D48</color>
+    <color name="blanc_casse">#FFF8F5</color>
+
+    <!-- Couleurs complémentaires -->
+    <color name="rose_clair">#F7E5EB</color>
+    <color name="rose_fonce">#C98FA7</color>
+    <color name="gris_texte">#75656B</color>
+    <color name="gris_clair">#F3EFF0</color>
+
+    <!-- Couleurs de base -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
 </resources>

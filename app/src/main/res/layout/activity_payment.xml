@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanc_casse">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paiement"
+            android:textColor="@color/bordeaux"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choisissez votre mode de paiement"
+            android:textColor="@color/gris_texte"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tvPaymentTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total à payer : 0.00 DT"
+            android:textColor="@color/bordeaux"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="18dp"
+            android:background="@color/rose_clair"
+            android:layout_marginBottom="25dp" />
+
+        <RadioGroup
+            android:id="@+id/rgPaymentMethods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbCash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paiement à la livraison"
+                android:textColor="@color/bordeaux"
+                android:textSize="17sp"
+                android:padding="12dp"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbSimulation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Paiement de démonstration"
+                android:textColor="@color/bordeaux"
+                android:textSize="17sp"
+                android:padding="12dp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mode démonstration : aucun paiement réel ne sera effectué et aucune donnée bancaire ne sera demandée."
+            android:textColor="@color/gris_texte"
+            android:textSize="14sp"
+            android:padding="14dp"
+            android:background="@color/white"
+            android:layout_marginTop="18dp" />
+
+        <Button
+            android:id="@+id/btnConfirmPayment"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="CONFIRMER"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/bordeaux"
+            android:layout_marginTop="28dp" />
+
+        <Button
+            android:id="@+id/btnBackPayment"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="RETOUR"
+            android:textColor="@color/bordeaux"
+            android:backgroundTint="@color/rose_clair"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+</ScrollView>

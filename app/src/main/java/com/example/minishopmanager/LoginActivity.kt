@@ -1,11 +1,14 @@
+
 package com.example.minishopmanager
 
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -17,45 +20,94 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val etStudentName = findViewById<EditText>(R.id.etStudentName)
+        val etEmail = findViewById<EditText>(R.id.etStudentName)
+        val etPassword = findViewById<EditText>(R.id.etPassword)
         val cbRemember = findViewById<CheckBox>(R.id.cbRemember)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val tvRegister = findViewById<TextView>(R.id.tvRegister)
 
-        prefs = getSharedPreferences("MiniShopPrefs", MODE_PRIVATE)
+        prefs = getSharedPreferences(
+            "MiniShopPrefs",
+            MODE_PRIVATE
+        )
 
-        // Charger les préférences sauvegardées
-        etStudentName.setText(prefs.getString("STUDENT", ""))
-        cbRemember.isChecked = prefs.getBoolean("REMEMBER", false)
+        val dbHelper = DBHelper(this)
+
+        etEmail.setText(prefs.getString("EMAIL", ""))
+        cbRemember.isChecked =
+            prefs.getBoolean("REMEMBER", false)
 
         btnLogin.setOnClickListener {
 
-            val nom = etStudentName.text.toString().trim()
+            val email = etEmail.text.toString().trim()
+            val password = etPassword.text.toString()
 
-            if (nom.isEmpty()) {
-                Toast.makeText(
-                    this,
-                    "Veuillez saisir votre nom",
-                    Toast.LENGTH_SHORT
-                ).show()
+            if (email.isEmpty()) {
+
+                etEmail.error = "Veuillez saisir votre e-mail"
+
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+
+                etEmail.error = "Adresse e-mail invalide"
+
+            } else if (password.isEmpty()) {
+
+                etPassword.error = "Veuillez saisir votre mot de passe"
+
             } else {
 
-                val editor = prefs.edit()
+                val connected = dbHelper.checkUser(
+                    email,
+                    password
+                )
 
-                if (cbRemember.isChecked) {
-                    editor.putString("STUDENT", nom)
-                    editor.putBoolean("REMEMBER", true)
+                if (connected) {
+
+                    val editor = prefs.edit()
+
+                    if (cbRemember.isChecked) {
+                        editor.putString("EMAIL", email)
+                        editor.putBoolean("REMEMBER", true)
+                    } else {
+                        editor.remove("EMAIL")
+                        editor.putBoolean("REMEMBER", false)
+                    }
+
+                    editor.apply()
+
+                    Toast.makeText(
+                        this,
+                        "Bienvenue !",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    val intent = Intent(
+                        this,
+                        MainActivity::class.java
+                    )
+
+                    startActivity(intent)
+                    finish()
+
                 } else {
-                    editor.remove("STUDENT")
-                    editor.putBoolean("REMEMBER", false)
+
+                    Toast.makeText(
+                        this,
+                        "E-mail ou mot de passe incorrect.",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
-
-                editor.apply()
-
-                // Ouvrir le catalogue
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
             }
+        }
+
+        tvRegister.setOnClickListener {
+
+            val intent = Intent(
+                this,
+                RegisterActivity::class.java
+            )
+
+            startActivity(intent)
         }
     }
 }

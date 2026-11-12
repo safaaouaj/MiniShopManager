@@ -1,9 +1,26 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MiniShopManager" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.MiniShopManager"
+        parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/bordeaux</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/rose_poudre</item>
+        <item name="colorOnSecondary">@color/bordeaux</item>
+
+        <item name="colorSurface">@color/blanc_casse</item>
+        <item name="colorOnSurface">@color/bordeaux</item>
+
+        <item name="android:colorBackground">@color/blanc_casse</item>
+        <item name="android:statusBarColor">@color/blanc_casse</item>
+        <item name="android:navigationBarColor">@color/blanc_casse</item>
+        <item name="android:windowLightStatusBar">true</item>
+
     </style>
 
-    <style name="Theme.MiniShopManager" parent="Base.Theme.MiniShopManager" />
+    <style name="Theme.MiniShopManager"
+        parent="Base.Theme.MiniShopManager" />
+
 </resources>

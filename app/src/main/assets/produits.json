@@ -1,34 +1,11 @@
+
 [
-  {
-    "nom": "Téléphone",
-    "image": "telephone"
-  },
-  {
-    "nom": "Casque Bluetooth",
-    "image": "casque"
-  },
-  {
-    "nom": "Montre connectée",
-    "image": "montre"
-  },
-  {
-    "nom": "Chargeur USB",
-    "image": "chargeurr"
-  },
-  {
-    "nom": "Coque de téléphone",
-    "image": "coque"
-  },
-  {
-    "nom": "Écouteurs sans fil",
-    "image": "ecouteurs"
-  },
-  {
-    "nom": "Power Bank",
-    "image": "powerbank"
-  },
-  {
-    "nom": "Câble USB-C",
-    "image": "cable"
-  }
+  {"nom":"Téléphone","image":"telephone","prix":899.0},
+  {"nom":"Casque Bluetooth","image":"casque","prix":129.0},
+  {"nom":"Montre connectée","image":"montre","prix":189.0},
+  {"nom":"Chargeur USB","image":"chargeurr","prix":35.0},
+  {"nom":"Coque de téléphone","image":"coque","prix":25.0},
+  {"nom":"Écouteurs sans fil","image":"ecouteurs","prix":79.0},
+  {"nom":"Power Bank","image":"powerbank","prix":59.0},
+  {"nom":"Câble USB-C","image":"cable","prix":19.0}
 ]

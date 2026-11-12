@@ -1,37 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:padding="16dp"
-    android:background="#FFF5F7">
+    android:background="@color/blanc_casse"
+    android:padding="18dp">
 
+    <!-- En-tête -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MiniShopManager"
+                android:textColor="@color/bordeaux"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Découvrez notre collection"
+                android:textColor="@color/gris_texte"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCart"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Panier"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/rose_fonce"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Profil"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/bordeaux"
+            android:layout_marginStart="6dp"/>
+
+    </LinearLayout>
+
+    <!-- Titre -->
     <TextView
-        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MiniShopManager"
-        android:textSize="28sp"
+        android:text="Bienvenue dans votre boutique !"
+        android:textColor="@color/bordeaux"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="#8E3A59"
-        android:layout_marginBottom="12dp" />
+        android:layout_marginTop="28dp"/>
 
-    <Button
-        android:id="@+id/btnNext"
+    <!-- Barre de recherche -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Rechercher un produit..."
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:backgroundTint="@color/rose_fonce"
+        android:layout_marginTop="18dp"/>
+
+    <!-- Titre des produits -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Suivant"
-        android:layout_marginBottom="12dp" />
+        android:text="Nos produits"
+        android:textColor="@color/bordeaux"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="12dp"/>
 
+    <!-- Liste des produits -->
     <ListView
         android:id="@+id/lstViewProduits"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:divider="#E0B7C5"
-        android:dividerHeight="1dp" />
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"/>
 
 </LinearLayout>

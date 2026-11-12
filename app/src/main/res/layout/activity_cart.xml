@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/blanc_casse">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mon panier"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/bordeaux"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvCartCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0 article"
+        android:textColor="@color/gris_texte"
+        android:textSize="15sp"
+        android:layout_marginBottom="18dp" />
+
+    <TextView
+        android:id="@+id/tvEmptyCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Votre panier est vide."
+        android:textColor="@color/gris_texte"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="20dp" />
+
+    <ListView
+        android:id="@+id/lstCart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/rose_clair"
+        android:dividerHeight="8dp" />
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="VALIDER MA COMMANDE"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/bordeaux"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/btnClearCart"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="VIDER LE PANIER"
+        android:textColor="@color/bordeaux"
+        android:backgroundTint="@color/rose_clair"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnBackShop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="RETOURNER À LA BOUTIQUE"
+        android:textColor="@color/bordeaux"
+        android:backgroundTint="@color/rose_clair"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

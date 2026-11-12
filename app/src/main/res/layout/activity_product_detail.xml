@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanc_casse">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Détail du produit"
+            android:textColor="@color/bordeaux"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <ImageView
+            android:id="@+id/imgDetailProduit"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="fitCenter"
+            android:background="@color/white"
+            android:contentDescription="Image du produit" />
+
+        <TextView
+            android:id="@+id/tvDetailNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom du produit"
+            android:textColor="@color/bordeaux"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="22dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="@color/bordeaux"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/tvDetailDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description du produit"
+            android:textColor="@color/gris_texte"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvDetailPrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 DT"
+            android:textColor="@color/bordeaux"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="AJOUTER AU PANIER"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/bordeaux"
+            android:layout_marginTop="25dp" />
+
+        <Button
+            android:id="@+id/btnBackDetail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="RETOUR À LA BOUTIQUE"
+            android:textColor="@color/bordeaux"
+            android:backgroundTint="@color/rose_clair"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+</ScrollView>
